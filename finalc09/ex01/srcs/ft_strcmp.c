@@ -5,17 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hait-bah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/03 15:33:01 by hait-bah          #+#    #+#             */
-/*   Updated: 2025/08/05 14:49:33 by hait-bah         ###   ########.fr       */
+/*   Created: 2025/08/05 13:43:38 by hait-bah          #+#    #+#             */
+/*   Updated: 2025/08/05 13:43:54 by hait-bah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strcmp(char *s1, char *s2)
 {
-	int	i;
-
-	i = 0;
-	while (s1[i] && s2[i] && s2[i] == s1[i])
-		i++;
-	return (s1[i] - s2[i]);
+	while (*s1 && *s2 && *s1 == *s2)
+	{
+		s1++;
+		s2++;
+	}
+	return ((unsigned char)*s1 - (unsigned char)*s2);
 }
+
